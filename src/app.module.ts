@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { SiteModule } from './domain/site/site.module';
+import { MikroOrmModule } from '@mikro-orm/nestjs';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [MikroOrmModule.forRoot(), SiteModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
