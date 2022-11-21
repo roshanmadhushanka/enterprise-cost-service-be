@@ -8,6 +8,7 @@ async function bootstrap() {
     logger: console,
   });
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors();
 
   const config = new DocumentBuilder()
     .setTitle('Enterprise Cost Service')
